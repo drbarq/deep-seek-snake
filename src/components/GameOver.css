@@ -1,0 +1,142 @@
+.game-over {
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.game-over-content {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 40px 30px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  animation: slideIn 0.5s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.game-over h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #FF5252;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.score-display {
+  margin: 30px 0;
+}
+
+.final-score {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+  background: rgba(255, 82, 82, 0.2);
+  padding: 15px 25px;
+  border-radius: 25px;
+  border: 2px solid #FF5252;
+}
+
+.new-high-score {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: gold;
+  margin: 15px 0;
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+  animation: glow 2s infinite;
+}
+
+@keyframes glow {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+.high-score-display {
+  font-size: 1.2rem;
+  opacity: 0.9;
+  margin-top: 10px;
+}
+
+.game-over-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin: 30px 0;
+}
+
+.restart-btn,
+.menu-btn {
+  padding: 16px 32px;
+  border: none;
+  border-radius: 25px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.restart-btn {
+  background: linear-gradient(135deg, #4CAF50, #45a049);
+  color: white;
+  box-shadow: 0 4px 15px rgba(76, 175, 80, 0.4);
+}
+
+.restart-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(76, 175, 80, 0.6);
+}
+
+.menu-btn {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.menu-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-1px);
+}
+
+.game-over-message {
+  margin-top: 20px;
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+.game-over-message p {
+  margin: 0;
+  font-style: italic;
+}
+
+@media (max-width: 480px) {
+  .game-over-content {
+    padding: 30px 20px;
+    margin: 0 10px;
+  }
+  
+  .game-over h2 {
+    font-size: 2rem;
+  }
+  
+  .final-score {
+    font-size: 1.3rem;
+    padding: 12px 20px;
+  }
+  
+  .restart-btn,
+  .menu-btn {
+    padding: 14px 24px;
+    font-size: 1rem;
+  }
+}
